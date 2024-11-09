@@ -1,5 +1,4 @@
 
-/* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
@@ -39,14 +38,11 @@
   --contrast-color: #000000;
 }
 
-/* Smooth scroll */
 :root {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -74,8 +70,6 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
 .php-email-form .error-message {
   display: none;
   background: #df1529;
@@ -126,9 +120,7 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Global Header
---------------------------------------------------------------*/
+
 .header {
   --background-color: rgba(0, 0, 0, 0);
   color: var(--default-color);
@@ -163,16 +155,12 @@ h6 {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
-/* Global Header on Scroll
-------------------------------*/
+
 .scrolled .header {
   --background-color: rgba(0, 0, 0, 0.8);
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Desktop Navigation */
+
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -304,7 +292,6 @@ h6 {
   }
 }
 
-/* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
@@ -430,9 +417,7 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
+
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -493,9 +478,7 @@ h6 {
   padding-top: 5px;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
+
 #preloader {
   position: fixed;
   inset: 0;
@@ -528,9 +511,7 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
+
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -562,18 +543,14 @@ h6 {
   bottom: 15px;
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
+
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 }
 
-/*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
---------------------------------------------------------------*/
+
 .page-title {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -615,9 +592,7 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-/*--------------------------------------------------------------
-# Global Sections
---------------------------------------------------------------*/
+
 section,
 .section {
   color: var(--default-color);
@@ -635,9 +610,7 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Global Section Titles
---------------------------------------------------------------*/
+
 .section-title {
   padding-bottom: 60px;
   position: relative;
@@ -674,9 +647,7 @@ section,
   font-family: var(--heading-font);
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -750,9 +721,7 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
+
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
@@ -780,9 +749,7 @@ section,
   line-height: 0;
 }
 
-/*--------------------------------------------------------------
-# Stats Section
---------------------------------------------------------------*/
+
 .stats i {
   background-color: var(--surface-color);
   color: var(--accent-color);
@@ -825,9 +792,7 @@ section,
   font-size: 16px;
 }
 
-/*--------------------------------------------------------------
-# Skills Section
---------------------------------------------------------------*/
+
 .skills .progress {
   height: 60px;
   display: block;
@@ -862,9 +827,6 @@ section,
   background-color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Interests Section
---------------------------------------------------------------*/
 .interests .features-item {
   background-color: var(--surface-color);
   display: flex;
@@ -903,9 +865,7 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Resume Section
---------------------------------------------------------------*/
+
 .resume .resume-title {
   color: var(--heading-color);
   font-size: 26px;
@@ -962,9 +922,7 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
+
 .services .service-item {
   background-color: var(--surface-color);
   text-align: center;
@@ -1040,9 +998,7 @@ section,
   color: var(--contrast-color);
 }
 
-/*--------------------------------------------------------------
-# Service Details Section
---------------------------------------------------------------*/
+
 .service-details .services-list {
   background-color: var(--surface-color);
   padding: 10px 30px;
@@ -1106,9 +1062,7 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Portfolio Section
---------------------------------------------------------------*/
+
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -1219,9 +1173,7 @@ section,
   transform: scale(1.1);
 }
 
-/*--------------------------------------------------------------
-# Portfolio Details Section
---------------------------------------------------------------*/
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
@@ -1282,9 +1234,6 @@ section,
 }
 
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
 .contact .info-item {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 20px 30px;
