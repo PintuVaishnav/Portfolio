@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Web development',
       lang: 'HTML5,CSS,JAVASCRIPT,PHP,MYSQL',
       projectDate: '29 SEPTEMBER, 2024',
-      projectURL: 'https://bhavansvc.ac.in/index_sample.html',
+      projectURL: 'https://bvc-website.netlify.app/',
       description: 'The College Website is a responsive and dynamic platform developed using HTML, CSS, JavaScript, Bootstrap, PHP, and MySQL. It features an intuitive, well-designed UI for easy navigation by students, faculty, and visitors. An integrated admin panel allows authorized users to update and manage content, enhancing site flexibility and functionality. With database integration and device optimization, the website provides a seamless and engaging user experience for academic and administrative needs.',
       title: 'DEMO-COLLEGE-WEBSITE'
     }
