@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
       projectDate: '29 SEPTEMBER, 2024',
       projectURL: 'https://bhavansvc.ac.in/index_sample.html',
       description: 'The College Website is a responsive and dynamic platform developed using HTML, CSS, JavaScript, Bootstrap, PHP, and MySQL. It features an intuitive, well-designed UI for easy navigation by students, faculty, and visitors. An integrated admin panel allows authorized users to update and manage content, enhancing site flexibility and functionality. With database integration and device optimization, the website provides a seamless and engaging user experience for academic and administrative needs.',
-      title: 'COLLEGE WEBSITE'
+      title: 'DEMO-COLLEGE-WEBSITE'
     }
     , 3: {
       images: [
