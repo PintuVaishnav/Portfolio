@@ -44,8 +44,16 @@ jobs:
           ARGOCD_SERVER: ${{ secrets.ARGOCD_SERVER }}
           ARGOCD_TOKEN: ${{ secrets.ARGOCD_TOKEN }}
         run: |
-          curl -X POST "$ARGOCD_SERVER/api/v1/applications/portfolio/sync" \
-          -H "Authorization: Bearer $ARGOCD_TOKEN"
+          # Wait until ArgoCD API is reachable
+          for i in {1..10}; do
+            curl -k -s -f -H "Authorization: Bearer $ARGOCD_TOKEN" "$ARGOCD_SERVER/api/v1/applications/portfolio" && break
+            echo "Waiting for ArgoCD server..."
+            sleep 5
+          done
+
+          # Trigger sync
+          curl -k -X POST "$ARGOCD_SERVER/api/v1/applications/portfolio/sync" \
+            -H "Authorization: Bearer $ARGOCD_TOKEN"
 
       # 6️⃣ Trigger Vercel deployment
       - name: Trigger Vercel Deployment
@@ -54,6 +62,6 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           curl -X POST "https://api.vercel.com/v1/integrations/deploy/$VERCEL_PROJECT_ID" \
-          -H "Authorization: Bearer $VERCEL_TOKEN" \
-          -H "Content-Type: application/json" \
-          -d '{"gitBranch":"main"}'
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{"gitBranch":"main"}'
