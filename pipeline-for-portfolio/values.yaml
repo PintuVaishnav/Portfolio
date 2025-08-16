@@ -1,6 +1,6 @@
 image:
   repository: vaishnavyejju/portfolio
-  tag: latest
+  tag: 726a968aa7072b9501ce21daabcd546378f33962
   pullpolicy: IfNotPresent
 
 service:
