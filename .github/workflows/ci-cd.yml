@@ -47,7 +47,7 @@ jobs:
       # 5️⃣ Update Helm Chart with new image tag
       - name: Update Helm Chart
         run: |
-          sed -i "s/image: vaishnavyejju\/portfolio:latest/image: vaishnavyejju\/portfolio:${{ github.sha }}/" ./helm/portfolio/Chart.yaml
+          sed -i "s/image: vaishnavyejju\/portfolio:latest/image: vaishnavyejju\/portfolio:${{ github.sha }}/" ./helm/portfolio/pipeline-for-portfolio/Chart.yaml
           git add ./helm/portfolio/Chart.yaml
           git commit -m "Update Helm Chart with new image tag"
           git push
