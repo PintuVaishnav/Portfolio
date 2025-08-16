@@ -57,22 +57,4 @@ jobs:
           git push
 
 
-      # 5️⃣ Trigger ArgoCD sync for GKE deployment
-      - name: Trigger ArgoCD Sync
-        env:
-          ARGOCD_SERVER: ${{ secrets.ARGOCD_SERVER }}
-          ARGOCD_TOKEN: ${{ secrets.ARGOCD_TOKEN }}
-        run: |
-          curl -k -X POST "$ARGOCD_SERVER/api/v1/applications/portfolio/sync" \
-          -H "Authorization: Bearer $ARGOCD_TOKEN"
-
-      # 6️⃣ Trigger Vercel deployment
-      - name: Trigger Vercel Deployment
-        env:
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: |
-          curl -X POST "https://api.vercel.com/v1/integrations/deploy/$VERCEL_PROJECT_ID" \
-            -H "Authorization: Bearer $VERCEL_TOKEN" \
-            -H "Content-Type: application/json" \
-            -d '{"gitBranch":"main"}'
+      
