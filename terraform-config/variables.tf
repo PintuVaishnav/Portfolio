@@ -1,6 +1,6 @@
 variable "project_id" {
   type        = string
-  default     = "gentle-broker-469013-d6" # change to your project ID
+  default     = "primeval-argon-465014-s8" # change to your project ID
 }
 
 variable "cluster_name" {
