@@ -38,6 +38,20 @@ jobs:
             vaishnavyejju/portfolio:latest
             vaishnavyejju/portfolio:${{ github.sha }}
 
+      # 5️⃣ Github Config
+      - name: Configure Git
+        run: |
+          git config user.name "vaishnavyejju"
+          git config user.email "vaishnavyejju@gmail.com"
+
+      # 5️⃣ Update Helm Chart with new image tag
+      - name: Update Helm Chart
+        run: |
+          sed -i "s/image: vaishnavyejju\/portfolio:latest/image: vaishnavyejju\/portfolio:${{ github.sha }}/" ./helm/portfolio/Chart.yaml
+          git add ./helm/portfolio/Chart.yaml
+          git commit -m "Update Helm Chart with new image tag"
+          git push
+
       # 5️⃣ Trigger ArgoCD sync for GKE deployment
       - name: Trigger ArgoCD Sync
         env:

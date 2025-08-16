@@ -1,0 +1,14 @@
+image:
+  repository: vaishnavyejju/portfolio
+  tag: latest
+  pullpolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+ingress:
+  enabled: false
+serviceaccount:
+  enabled: false
+autoscaling:
+  enabled: false
