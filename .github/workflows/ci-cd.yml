@@ -44,13 +44,14 @@ jobs:
           git config user.name "vaishnavyejju"
           git config user.email "vaishnavyejju@gmail.com"
 
-      # 5️⃣ Update Helm Chart with new image tag
-      - name: Update Helm Chart
+      # 5️⃣ Update Helm values.yaml with new image tag
+      - name: Update Helm values.yaml
         run: |
-          sed -i "s/image: vaishnavyejju\/portfolio:latest/image: vaishnavyejju\/portfolio:${{ github.sha }}/" ./helm/portfolio/pipeline-for-portfolio/Chart.yaml
-          git add ./helm/portfolio/pipeline-for-portfolio/Chart.yaml
-          git commit -m "Update Helm Chart with new image tag"
+          sed -i "s|tag: latest|tag: ${{ github.sha }}|" ./pipeline-for-portfolio/values.yaml
+          git add ./pipeline-for-portfolio/values.yaml
+          git commit -m "Update Helm values.yaml with new image tag"
           git push
+
 
       # 5️⃣ Trigger ArgoCD sync for GKE deployment
       - name: Trigger ArgoCD Sync
