@@ -51,10 +51,17 @@ jobs:
       # 5️⃣ Update Helm values.yaml with new image tag
       - name: Update Helm values.yaml
         run: |
-          sed -i "s|tag: latest|tag: ${{ github.sha }}|" ./pipeline-for-portfolio/values.yaml
+          sed -i "s|tag:.*|tag: ${{ github.sha }}|" ./pipeline-for-portfolio/values.yaml
+          
+          if git diff --quiet; then
+            echo "❌ No changes detected — tag not updated"
+            exit 1
+          fi
+      
           git add ./pipeline-for-portfolio/values.yaml
           git commit -m "Update Helm values.yaml with new image tag"
           git push
+
 
 
       
