@@ -1,6 +1,6 @@
 image:
   repository: vaishnavyejju/portfolio
-  tag: 8e58054a0b14f45df6166f5369f5ed0cfb4fa0a6
+  tag: f8303c7378a61dc0e02e60ebfab4f2416e771585
   pullpolicy: IfNotPresent
 
 service:
